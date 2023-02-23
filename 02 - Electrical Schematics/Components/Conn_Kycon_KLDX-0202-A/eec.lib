@@ -1,0 +1,50 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Kycon KLDX-0202-A
+#
+DEF KLDX-0202-A J 0 0 Y Y 1 L N
+F0 "J" 0 300 50 H V L CNN 
+F1 "KLDX-0202-A" 0 400 50 H V L CNN 
+F2 "Kycon-KLDX-0202-A-*" 0 500 50 H I L CNN 
+F3 "http://failover.kycon.com/2013Catalogpage/DC%20Power/KLDX_0202_LT.pdf" 0 600 50 H I L CNN 
+F4 "No" 0 700 50 H I L CNN "automotive"
+F5 "Conn" 0 800 50 H I L CNN "category"
+F6 "Tin,Nickel" 0 900 50 H I L CNN "contact material"
+F7 "3.5A" 0 1000 50 H I L CNN "current rating"
+F8 "Connectors" 0 1100 50 H I L CNN "device class L1"
+F9 "Power Connectors" 0 1200 50 H I L CNN "device class L2"
+F10 "unset" 0 1300 50 H I L CNN "device class L3"
+F11 "CONN PWR JACK 2X5.5MM SOLDER" 0 1400 50 H I L CNN "digikey description"
+F12 "2092-KLDX-0202-A-ND" 0 1500 50 H I L CNN "digikey part number"
+F13 "https://datasheet.octopart.com/KLDX-0202-B-Kycon-datasheet-62545.pdf" 0 1600 50 H I L CNN "footprint url"
+F14 "11mm" 0 1700 50 H I L CNN "height"
+F15 "Yes" 0 1800 50 H I L CNN "lead free"
+F16 "ef8bae549c499872" 0 1900 50 H I L CNN "library id"
+F17 "Kycon" 0 2000 50 H I L CNN "manufacturer"
+F18 "Dc Power Jack, 2Mm, 3.5A, 24Vdc, Pcb Rohs Compliant: Yes" 0 2100 50 H I L CNN "mouser description"
+F19 "806-KLDX-0202-A" 0 2200 50 H I L CNN "mouser part number"
+F20 "1" 0 2300 50 H I L CNN "number of contacts"
+F21 "CONN_POWER_15MM2_9MM0" 0 2400 50 H I L CNN "package"
+F22 "Yes" 0 2500 50 H I L CNN "rohs"
+F23 "+85°C" 0 2600 50 H I L CNN "temperature range high"
+F24 "-25°C" 0 2700 50 H I L CNN "temperature range low"
+F25 "24V" 0 2800 50 H I L CNN "voltage rating"
+DRAW
+X 1 1 -100 0 100 L 40 0 1 1 P 
+X 2 2 -100 -450 100 L 40 0 1 1 P 
+X 3 3 -100 -250 100 L 40 0 1 1 P 
+S -500 150 -400 -150 1 1 0 f
+P 2 1 1 0 -500 100 -800 100 N
+P 2 1 1 0 -800 -100 -500 -100 N
+A -800 0 100 900 2699 1 1 0 N -800 100 -800 -100
+P 2 1 1 0 -400 0 -200 0 N
+P 2 1 1 0 -600 -450 -600 -250 N
+P 2 1 1 0 -600 -250 -200 -250 N
+P 2 1 1 0 -900 -450 -800 -250 N
+P 2 1 1 0 -800 -250 -700 -450 N
+P 2 1 1 0 -700 -450 -200 -450 N
+ENDDRAW
+ENDDEF
+#
+# End Library

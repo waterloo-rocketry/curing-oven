@@ -1,0 +1,509 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Relay_SolidState:S216S02 #U5
+U 1 1 621A9D71
+P 6000 2350
+F 0 "#U5" H 6000 2675 50  0000 C CNN
+F 1 "SO965460" H 6000 2584 50  0000 C CNN
+F 2 "Package_SIP:SIP4_Sharp-SSR_P7.62mm_Straight" H 5800 2150 50  0001 L CIN
+F 3 "http://www.sharp-world.com/products/device/lineup/data/pdf/datasheet/s116s02_e.pdf" H 6000 2350 50  0001 L CNN
+	1    6000 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Heater #R1
+U 1 1 621AB5B9
+P 6500 2050
+F 0 "#R1" H 6570 2096 50  0000 L CNN
+F 1 "Heater" H 6570 2005 50  0000 L CNN
+F 2 "" V 6430 2050 50  0001 C CNN
+F 3 "~" H 6500 2050 50  0001 C CNN
+	1    6500 2050
+	1    0    0    -1  
+$EndComp
+Text Notes 6900 2150 0    50   ~ 0
+240 VAC 2 kW Heater\nThermolec
+Text Notes 3000 5950 0    50   ~ 0
+AUXILIARY RELAY\n240 VAC 20 A
+Text Notes 3200 5100 0    50   ~ 0
+BLOWER RELAY\n240 VAC 20 A
+Wire Wire Line
+	5200 2700 5900 2700
+Wire Wire Line
+	5900 2700 5900 2750
+Wire Wire Line
+	5900 3350 5250 3350
+Wire Wire Line
+	5000 3300 5000 2250
+Wire Wire Line
+	5000 2250 5700 2250
+Wire Wire Line
+	5700 2450 5100 2450
+Wire Wire Line
+	6500 2200 6500 2250
+Wire Wire Line
+	6500 2250 6300 2250
+Text Notes 6700 3200 0    50   ~ 0
+INPUT RELAY - OVEN \n240 VAC 25 A
+Text GLabel 7600 3800 2    50   Input ~ 0
+240V_X
+Text GLabel 6700 2450 2    50   Input ~ 0
+240V_Y
+Wire Wire Line
+	6300 2450 6350 2450
+Text GLabel 6700 1500 2    50   Input ~ 0
+240V_X
+Text GLabel 1150 3550 0    50   Input ~ 0
+HTR1
+Text GLabel 2900 4800 0    50   Input ~ 0
+BLW1
+Text GLabel 2600 5650 0    50   Input ~ 0
+AUX1
+Text GLabel 1150 3450 0    50   Input ~ 0
+IRO1
+Text GLabel 1100 3350 0    50   Input ~ 0
+12V_F
+$Comp
+L Motor:Fan #M1
+U 1 1 6220920F
+P 4850 5100
+F 0 "#M1" V 4700 5300 50  0000 C CNN
+F 1 "Fan" V 4646 5150 50  0000 C CNN
+F 2 "" H 4850 5110 50  0001 C CNN
+F 3 "~" H 4850 5110 50  0001 C CNN
+	1    4850 5100
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7600 2550 2    50   Input ~ 0
+240V_IN_X
+$Comp
+L Switch:SW_Push_Open #ESTP1
+U 1 1 621F3F07
+P 5100 4200
+F 0 "#ESTP1" H 5100 4415 50  0000 C CNN
+F 1 "SW_Push_Open" H 5100 4324 50  0000 C CNN
+F 2 "" H 5100 4400 50  0001 C CNN
+F 3 "~" H 5100 4400 50  0001 C CNN
+	1    5100 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse #F1
+U 1 1 621CF60F
+P 5800 4200
+F 0 "#F1" V 5603 4200 50  0000 C CNN
+F 1 "200 C Thermal Fuse" V 5694 4200 50  0000 C CNN
+F 2 "" V 5730 4200 50  0001 C CNN
+F 3 "~" H 5800 4200 50  0001 C CNN
+	1    5800 4200
+	0    1    1    0   
+$EndComp
+Text Notes 5000 4350 0    50   ~ 0
+INTERLOCK LOOP\n
+Wire Wire Line
+	3150 4200 4900 4200
+Wire Wire Line
+	4850 3850 4850 4000
+Wire Wire Line
+	4850 4000 4750 4000
+Wire Wire Line
+	4750 4000 4750 4150
+Wire Wire Line
+	4750 4150 3250 4150
+$Comp
+L OCE_L:J120D K1
+U 1 1 61D99B31
+P 3300 5600
+F 0 "K1" H 3275 5875 50  0000 C CNN
+F 1 "J120D" H 3275 5784 50  0000 C CNN
+F 2 "OCE_L:J120D" H 3000 5800 50  0001 C CNN
+F 3 "" H 3000 5800 50  0001 C CNN
+	1    3300 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 5650 2600 5650
+Wire Wire Line
+	3550 5650 4050 5650
+$Comp
+L OCE_L:J120D K2
+U 1 1 61DAA47E
+P 3500 4750
+F 0 "K2" H 3475 5025 50  0000 C CNN
+F 1 "J120D" H 3475 4934 50  0000 C CNN
+F 2 "OCE_L:J120D" H 3200 4950 50  0001 C CNN
+F 3 "" H 3200 4950 50  0001 C CNN
+	1    3500 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 4700 3200 4700
+Wire Wire Line
+	2900 4800 3200 4800
+Wire Wire Line
+	3950 4450 3950 4700
+Wire Wire Line
+	3950 4700 3750 4700
+Wire Wire Line
+	4000 5100 4000 4800
+Wire Wire Line
+	4000 4800 3750 4800
+Wire Wire Line
+	2400 4700 2400 5550
+Wire Wire Line
+	2400 5550 3000 5550
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J10
+U 1 1 6211A37E
+P 1450 3450
+F 0 "J10" H 1500 3767 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 1500 3676 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" H 1450 3450 50  0001 C CNN
+F 3 "~" H 1450 3450 50  0001 C CNN
+	1    1450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even #J11
+U 1 1 6211AD97
+P 4200 3450
+F 0 "#J11" H 4250 3767 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 4250 3676 50  0000 C CNN
+F 2 "" H 4200 3450 50  0001 C CNN
+F 3 "~" H 4200 3450 50  0001 C CNN
+	1    4200 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 3350 1800 3350
+Wire Wire Line
+	1800 3350 1800 3450
+Wire Wire Line
+	1800 3450 1750 3450
+Wire Wire Line
+	1750 3550 1800 3550
+Wire Wire Line
+	1800 3450 1800 3550
+Connection ~ 1800 3450
+Wire Wire Line
+	1100 3350 1250 3350
+Wire Wire Line
+	1150 3550 1250 3550
+Wire Wire Line
+	1150 3450 1250 3450
+Wire Wire Line
+	3250 3350 4000 3350
+Wire Wire Line
+	3250 3350 3250 4150
+Wire Wire Line
+	3150 3050 4700 3050
+Wire Wire Line
+	4700 3050 4700 3350
+Wire Wire Line
+	4700 3350 4500 3350
+Wire Wire Line
+	3150 3050 3150 4200
+Wire Wire Line
+	4750 3300 4750 3450
+Wire Wire Line
+	4750 3450 4500 3450
+Wire Wire Line
+	4750 3300 5000 3300
+Wire Wire Line
+	5200 3550 4500 3550
+Wire Wire Line
+	5200 2700 5200 3550
+Wire Wire Line
+	5100 3650 3950 3650
+Wire Wire Line
+	5100 2450 5100 3650
+Wire Wire Line
+	5250 3350 5250 3700
+Wire Wire Line
+	1800 3550 1800 4700
+Wire Wire Line
+	1800 4700 2400 4700
+Connection ~ 1800 3550
+Connection ~ 2400 4700
+Text GLabel 4050 5650 2    50   Input ~ 0
+AUX_L_L
+Text GLabel 4050 5550 2    50   Input ~ 0
+AUX_L_H
+Wire Wire Line
+	4050 5550 3950 5550
+Wire Wire Line
+	4000 3550 3950 3550
+Wire Wire Line
+	3950 3550 3950 3650
+Wire Wire Line
+	3900 3700 3900 3450
+Wire Wire Line
+	3900 3450 4000 3450
+Wire Wire Line
+	3900 3700 5250 3700
+Text GLabel 2250 3700 2    50   Input ~ 0
+SEN_IL
+$Comp
+L Device:R R49
+U 1 1 61DDA27E
+P 2100 3500
+F 0 "R49" H 2030 3454 50  0000 R CNN
+F 1 "10k" H 2030 3545 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2030 3500 50  0001 C CNN
+F 3 "~" H 2100 3500 50  0001 C CNN
+	1    2100 3500
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R50
+U 1 1 61DDA665
+P 2100 3900
+F 0 "R50" H 2170 3946 50  0000 L CNN
+F 1 "2.5k" H 2170 3855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2030 3900 50  0001 C CNN
+F 3 "~" H 2100 3900 50  0001 C CNN
+	1    2100 3900
+	1    0    0    -1  
+$EndComp
+Text GLabel 2250 4150 2    50   Input ~ 0
+GND
+Wire Wire Line
+	2250 4150 2150 4150
+Wire Wire Line
+	2100 4150 2100 4050
+Wire Wire Line
+	2100 3700 2100 3650
+Wire Wire Line
+	2100 3750 2100 3700
+Connection ~ 2100 3700
+Wire Wire Line
+	2250 3700 2100 3700
+Wire Wire Line
+	2100 3350 1800 3350
+Connection ~ 1800 3350
+$Comp
+L Relay:DIPxx-2Axx-21x #K3
+U 1 1 620755F2
+P 6200 3050
+F 0 "#K3" H 6700 3200 50  0000 L CNN
+F 1 "G7L-2A-TUB-CB-DC12" H 6700 3100 50  0000 L CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 6700 3000 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 6200 3050 50  0001 C CNN
+	1    6200 3050
+	1    0    0    -1  
+$EndComp
+Text GLabel 7600 2850 2    50   Input ~ 0
+240V_IN_Y
+Wire Wire Line
+	6600 2700 6600 2750
+Text GLabel 7600 3400 2    50   Input ~ 0
+240V_Y
+$Comp
+L Device:Fuse #F7
+U 1 1 6208AE85
+P 7350 2850
+F 0 "#F7" V 7153 2850 50  0000 C CNN
+F 1 "10 A 3AG Fuse" V 7244 2850 50  0000 C CNN
+F 2 "" V 7280 2850 50  0001 C CNN
+F 3 "~" H 7350 2850 50  0001 C CNN
+	1    7350 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse #F6
+U 1 1 6208B094
+P 7350 2550
+F 0 "#F6" V 7153 2550 50  0000 C CNN
+F 1 "10 A 3AG Fuse" V 7244 2550 50  0000 C CNN
+F 2 "" V 7280 2550 50  0001 C CNN
+F 3 "~" H 7350 2550 50  0001 C CNN
+	1    7350 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7600 2550 7500 2550
+Wire Wire Line
+	7500 2850 7600 2850
+Wire Wire Line
+	7200 2550 6300 2550
+Wire Wire Line
+	6300 2550 6300 2750
+Wire Wire Line
+	7200 2850 7000 2850
+Wire Wire Line
+	7000 2850 7000 2700
+Wire Wire Line
+	7000 2700 6600 2700
+$Comp
+L Device:Fuse #F2
+U 1 1 6209B04F
+P 4300 4450
+F 0 "#F2" V 4103 4450 50  0000 C CNN
+F 1 "1 A 3AG Fuse" V 4194 4450 50  0000 C CNN
+F 2 "" V 4230 4450 50  0001 C CNN
+F 3 "~" H 4300 4450 50  0001 C CNN
+	1    4300 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 4200 5650 4200
+Wire Wire Line
+	5950 4200 6200 4200
+Wire Wire Line
+	6200 4200 6200 3850
+Wire Wire Line
+	4850 3850 6200 3850
+Text GLabel 4700 4450 2    50   Input ~ 0
+240V_X
+Text GLabel 5350 5100 2    50   Input ~ 0
+240V_Y
+Wire Wire Line
+	5350 5100 5050 5100
+$Comp
+L Device:Lamp #LA1
+U 1 1 621D02BB
+P 7350 3600
+F 0 "#LA1" H 7478 3646 50  0000 L CNN
+F 1 "RAD223P 230V Panel Indicator" H 7478 3555 50  0000 L CNN
+F 2 "" V 7350 3700 50  0001 C CNN
+F 3 "~" V 7350 3700 50  0001 C CNN
+	1    7350 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 3400 6600 3400
+Wire Wire Line
+	6600 3400 6600 3350
+Wire Wire Line
+	6300 3350 6500 3350
+Wire Wire Line
+	6500 3350 6500 3500
+Wire Wire Line
+	6500 3500 7100 3500
+Wire Wire Line
+	7100 3500 7100 3800
+Wire Wire Line
+	7100 3800 7350 3800
+Wire Wire Line
+	7600 3400 7350 3400
+Connection ~ 7350 3400
+Wire Wire Line
+	7350 3800 7600 3800
+Connection ~ 7350 3800
+Wire Wire Line
+	4150 4450 3950 4450
+Wire Wire Line
+	4450 4450 4700 4450
+Wire Wire Line
+	4000 5100 4150 5100
+$Comp
+L Device:Fuse #F3
+U 1 1 620C36AB
+P 4300 5100
+F 0 "#F3" V 4103 5100 50  0000 C CNN
+F 1 "1 A 3AG Fuse" V 4194 5100 50  0000 C CNN
+F 2 "" V 4230 5100 50  0001 C CNN
+F 3 "~" H 4300 5100 50  0001 C CNN
+	1    4300 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4450 5100 4550 5100
+$Comp
+L Device:Fuse #F8
+U 1 1 620C3BD6
+P 3800 5550
+F 0 "#F8" V 3603 5550 50  0000 C CNN
+F 1 "20 A 3AG Fuse" V 3694 5550 50  0000 C CNN
+F 2 "" V 3730 5550 50  0001 C CNN
+F 3 "~" H 3800 5550 50  0001 C CNN
+	1    3800 5550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 5550 3550 5550
+$Comp
+L Device:Fuse #F4
+U 1 1 620C43F3
+P 6500 1700
+F 0 "#F4" H 6560 1654 50  0000 L CNN
+F 1 "10 A 3AG Fuse" H 6560 1745 50  0000 L CNN
+F 2 "" V 6430 1700 50  0001 C CNN
+F 3 "~" H 6500 1700 50  0001 C CNN
+	1    6500 1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6500 1900 6500 1850
+Wire Wire Line
+	6500 1550 6500 1500
+Wire Wire Line
+	6500 1500 6700 1500
+$Comp
+L Device:Fuse #F5
+U 1 1 620CEFE0
+P 6500 2450
+F 0 "#F5" V 6700 2350 50  0000 C CNN
+F 1 "10 A 3AG Fuse" V 6606 2450 50  0000 C CNN
+F 2 "" V 6430 2450 50  0001 C CNN
+F 3 "~" H 6500 2450 50  0001 C CNN
+	1    6500 2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6650 2450 6700 2450
+Text Notes 7100 4500 0    50   ~ 0
+Fuseholder \n03540610ZXGY\n354 Series\n3AG Fuses - Ceramics
+$Comp
+L Device:R R58
+U 1 1 621B094C
+P 2350 3350
+F 0 "R58" V 2143 3350 50  0000 C CNN
+F 1 "1k" V 2234 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2280 3350 50  0001 C CNN
+F 3 "~" H 2350 3350 50  0001 C CNN
+	1    2350 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D11
+U 1 1 621B0E21
+P 2650 3550
+F 0 "D11" V 2689 3432 50  0000 R CNN
+F 1 "LED" V 2598 3432 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 2650 3550 50  0001 C CNN
+F 3 "~" H 2650 3550 50  0001 C CNN
+	1    2650 3550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 3700 2650 4050
+Wire Wire Line
+	2650 4050 2150 4050
+Wire Wire Line
+	2150 4050 2150 4150
+Connection ~ 2150 4150
+Wire Wire Line
+	2150 4150 2100 4150
+Wire Wire Line
+	2650 3400 2650 3350
+Wire Wire Line
+	2650 3350 2500 3350
+Wire Wire Line
+	2200 3350 2100 3350
+Connection ~ 2100 3350
+$EndSCHEMATC
