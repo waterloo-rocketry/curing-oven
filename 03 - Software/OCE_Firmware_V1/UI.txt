@@ -1,0 +1,54 @@
+
+
+
+
+OCE Controller Menu
+Group 41 Power Ranchers
+Funded By WEEF
+Call 226-627-9406 for support
+
+
+Main Menu
+
+	Cure Menu
+		Temperature Target
+		Time Heat
+		Time Hold
+		Time Cool
+
+	Sense Menu
+		Thermistor Select // Select which thermistors will be used
+		UA1 Select // Select UA1 as J type thermocouple or variable gain input
+		UA1 / UA2 Select // Plug UA3 into UA1 and UA2 (output calibration moved to CLI)
+		Vacuum Sense Enable and Under Vaccum Level // Enable the vacuum sense and enable an error on vacuum loss
+		Pitot Tube Sense Enable // Enable the Pitot Tube datalogging
+
+	Data Menu
+		Enable Data Saving // Choose to save data to SD card
+		Enable Data Upload // Choose to post data to the internet
+						
+	Controller Menu
+		Select Oven Size // Small / Medium / Large (picks gains to avoid an underdamped system or one with an unstable response)
+
+
+
+
+
+
+Interp
+
+float interpTherm(int dataRead, int mapTherm)
+{
+
+	int datalength = 51 ;
+	int t = 0 ;		
+
+	while(t<datalength && mapTherm[1][t]<dataRead)
+	{
+		t += 5 ;
+	}
+	
+	return (mapTherm[2][t+1]-mapTherm[2][t])/5*(dataRead-t)+mapTherm[2][t] ;
+
+}
+	
